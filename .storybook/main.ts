@@ -7,6 +7,10 @@ const config: StorybookConfig = {
         name: "@storybook/react-vite",
         options: {}
     },
-    staticDirs: ["../public"]
+    staticDirs: ["../public"],
+    viteFinal: (config) => ({
+        ...config,
+        base: "/keycloakify-starter-pages/"
+    })
 };
 export default config;
